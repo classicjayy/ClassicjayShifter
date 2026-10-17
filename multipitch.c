@@ -193,7 +193,7 @@ static int read_wav(const char *path, Wav *wav) {
                 return 0;
             }
             if (wav->audio_format != 1 || wav->bits_per_sample != 16) {
-                fprintf(stderr, "Only uncompressed 16-bit PCM WAV files are supported.\n");
+                fprintf(stderr, "Only uncompressed 16-bit PCM WAV files are supported. Please encode the audio to pcm_s16le in FFmpeg.\n");
                 fclose(f);
                 return 0;
             }
